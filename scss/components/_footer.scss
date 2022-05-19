@@ -1,0 +1,51 @@
+@import "../base/extends";
+@import "../base/animations";
+@import "../base/variables-listas";
+footer{
+    background-color: $color-primario;
+    border-radius: 8px;
+    .footer, .footer-links{
+        border-radius: 8px;
+        background-color: $color-secundario;
+    }
+    .anuncio{
+        background-color: $color-primario
+    }
+    //media queries
+    @media screen and (max-width: 570px){
+        .footer{
+            height: 96px;
+        }
+        .anuncio{
+            height: 96px;
+        }
+        h4{
+            font-size: 12px;
+        }
+    }
+    @media screen and (min-width: 571px) and (max-width: 1024px){
+        .footer{
+            height: 150px;
+        }
+        .anuncio{
+            height: 54px;
+        }
+        h4{
+            font-size: 22px;
+        }
+    }
+    @media screen and (min-width: 1025px){
+        .footer{
+            height: 200px;
+        }
+        .anuncio{
+            height: 33px;
+        }
+        h4{
+            font-size: 32px;
+        }
+    }
+    .footer-links, .footer-info{
+        margin: auto 0;
+    }
+}

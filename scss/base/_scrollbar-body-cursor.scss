@@ -1,0 +1,24 @@
+@import "../base/variables-listas";
+//scrollbar
+::-webkit-scrollbar{
+    //ancho
+    width: 25px;
+}
+::-webkit-scrollbar-track{
+    background: $color-secundario;
+    border-radius: 50px;
+}
+::-webkit-scrollbar-thumb{
+    background: $color-scrollbar;
+    border-radius: 50px;
+    width: 20px;
+}
+//body
+body{
+    background-color: $color-primario;
+    //cursor
+    cursor: url(../../images/cursor1.png), auto;
+}
+html{
+    cursor: url(../../images/cursor1.png), auto;
+}

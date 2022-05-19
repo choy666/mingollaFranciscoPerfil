@@ -1,0 +1,19 @@
+//nav-links hover
+@keyframes pulsate {
+    0%{
+        box-shadow: 0 0 25px black;
+    }
+}
+//card-funciones
+@keyframes rotBGimg{
+    from{
+      transform: rotate(0deg);
+    }
+    to{
+      transform: rotate(360deg);
+    }
+}
+//animations h1
+.animate__pulse{
+    animation-iteration-count: infinite;
+}

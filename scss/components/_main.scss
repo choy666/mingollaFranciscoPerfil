@@ -1,0 +1,270 @@
+@import "../base/extends";
+@import "../base/animations";
+@import "../base/variables-listas";
+main{
+    background-color: $color-primario;
+    border-radius: 8px;
+    flex-direction: column;
+    //media queries
+    @media screen and (max-width: 570px){
+        .titulo{
+            font-size: nth($h1-size, 1);
+        }
+        .profile-card{
+            h2{
+                font-size: nth($h2-size, 1);
+            }
+            h3{
+                font-size: nth($h3-size, 1);
+            }
+            p{
+                font-size: nth($p-size, 1);
+            }
+            h4{
+                font-size: nth($h4-size, 1);
+            }
+            height: 250px;
+            &:hover{
+                height: 700px;
+            }
+            &:hover .card-principal{
+                height: 270px;
+            }
+        }
+        .card-funciones{
+            &:hover{
+                height: 900px;
+            }
+        }
+        .card-estudio{
+            height: 200px;
+            .card-principal{
+                h2{
+                    margin-top: 75px;
+                }
+            }
+            &:hover{
+                height: 600px;
+            }
+            &:hover .card-principal{
+                height: 200px;
+            }
+        }
+    }
+    @media screen and (min-width: 571px) and (max-width: 1024px){
+        .titulo{
+            font-size: nth($h1-size, 2);
+        }
+        .profile-card{
+            h2{
+                font-size: nth($h2-size, 2);
+            }
+            h3{
+                font-size: nth($h3-size, 2);
+            }
+            p{
+                font-size: nth($p-size, 2);
+            }
+            h4{
+                font-size: nth($h4-size, 2);
+            }
+            height: 300px;
+            &:hover{
+                height: 770px;
+            }
+            &:hover .card-principal{
+                height: 300px;
+            }
+        }
+        .card-funciones{
+            &:hover{
+                height: 970px;
+            }
+        }
+        .card-estudio{
+            height: 300px;
+            .card-principal{
+                h2{
+                    margin-top: 125px;
+                }
+            }
+            &:hover{
+                height: 850px;
+            }
+            &:hover .card-principal{
+                height: 250px;
+            }
+        }
+    }
+    @media screen and (min-width: 1025px){
+        .titulo{
+            font-size: nth($h1-size, 3);
+        }
+        .profile-card{
+            h2{
+                font-size: nth($h2-size, 3);
+            }
+            h3{
+                font-size: nth($h3-size, 3);
+            }
+            p{
+                font-size: nth($p-size, 3);
+            }
+            h4{
+                font-size: nth($h4-size, 3);
+            }
+            height: 370px;
+            &:hover{
+                height: 750px;
+            }
+            &:hover .card-principal{
+                height: 370px;
+            }
+        }
+        .card-funciones{
+            &:hover{
+                height: 900px;
+            }
+        }
+        .card-estudio{
+            height: 300px;
+            .card-principal{
+                h2{
+                    margin-top: 125px;
+                }
+            }
+            &:hover{
+                height: 1050px;
+            }
+            &:hover .card-principal{
+                height: 250px;
+            }
+        }
+    }
+    .titulo{
+        margin-top: 75px;
+        margin-bottom: 75px;
+        font-weight: bold;
+        background: linear-gradient(45deg, black, yellow);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    h2{
+        color: $color-primario;
+        font-family: $fontFamily;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-align: center;
+        transition: all 0.5s;
+        z-index: 1;
+    }
+    h3{
+        color: $color-primario;
+        font-family: $fontFamily;
+        font-weight: 500;
+        letter-spacing: 4px;
+        text-align: center;
+        transition: all 0.5s;
+        z-index: 1;
+    }
+    .profile-card{
+        @extend %cards;
+        &:hover{
+            animation: pulsate 1s ease-in-out;
+            color: $color-primario;
+        }
+        .card-principal{
+            background: $color-primario;
+            padding: 1px;
+            height: 10px;
+            transition: all 0.5s;
+            img{
+                border: 5px solid $color-primario;
+                border-radius: 50%;
+                display: block;
+                margin: 20px auto;
+            }
+        }
+        .profile-bio{    
+            padding: 15px;
+            position: relative;
+            /* oculta la informacion hasta el hover */
+            opacity: 0;
+            transition: all 0.3s 0.25s;
+            p,h4{
+                color: $color-primario;
+                font-family:  $fontFamily;
+                font-style: italic;
+                text-align: center;
+                font-weight: 500;
+            }
+        }
+        .profile-social-links{
+            display: block;
+            list-style-type: none;
+            margin: 0 auto;
+            padding: 0;
+            position: relative;
+            width: 160px;
+            li{
+                display: block;
+                float: left;
+                transform: translateY(100px);
+                transition: all 0.3s cubic-bezier(0, 1.135, 0.73, 1.405) 0.25s;
+                &:nth-child(2){
+                    transition-delay: 0.35s;
+                }
+                &:nth-child(3){
+                    transition-delay: 0.45s;
+                }
+                a, .no-link{
+                    border-radius: 50%;
+                    display: block;
+                    float: left;
+                    outline: 0 none;
+                    transition: all 0.3s;
+                    margin: 0 4px;
+                    height: 45px;
+                    width: 45px;
+                }
+            }
+        }
+        .animation{
+            img{
+                transform: translateY(100px);
+                transition: all 0.3s cubic-bezier(0, 1.135, 0.73, 1.405) 0.25s;
+            }    
+        }
+        &:hover .card-principal h2,
+        &:hover .card-principal h3{
+            color: $color-secundario;
+        }
+        //muestra la informacion
+        &:hover .profile-bio{
+            opacity: 1;
+        }
+        //animacion de los social links
+        &:hover .profile-social-links li {
+            transform: translateY(0);
+        }
+        &:hover .profile-social-links img {
+            transform: translateY(0);
+        }
+        &:hover .animation img {
+            transform: translateY(0);
+        }
+    }
+    .card-contacto{
+        div{
+            margin-bottom: 20px;
+            border-radius: 20px;
+        }
+        .card{
+            background-color: $color-secundario;
+            .svg{
+                margin: 10px;
+            }
+        }
+    }
+}

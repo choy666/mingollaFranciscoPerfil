@@ -1,0 +1,25 @@
+@import "../base/extends";
+@import "../base/animations";
+@import "../base/variables-listas";
+nav{
+    border-radius: 8px;
+    background-color: $color-secundario;
+    margin-top: 10px;
+    .link-btn{
+        @extend %nav-links;
+        //media queries
+        @media screen and (max-width: 570px){
+            font-size: nth($nav-size, 1);
+        }
+        @media screen and (min-width: 571px) and (max-width: 1024px){
+            font-size: nth($nav-size, 2);
+        }
+        @media screen and (min-width: 1025px){
+            font-size: nth($nav-size, 3);
+        }
+        &:hover{
+            animation: pulsate 1s ease-in-out;
+            color: $color-primario;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+//reset
+*{
+    margin: 0;
+    padding: 0;
+}
+//imports base global
+@import "./base/scrollbar-body-cursor";
+//imports components 
+@import "./components/nav";
+@import "./components/main";
+@import "./components/footer";
