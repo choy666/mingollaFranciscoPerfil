@@ -63,8 +63,12 @@ main .profile-card {
     transform: rotate(360deg);
   }
 }
-.animate__pulse {
+.animate__pulse, .animate__headShake {
   animation-iteration-count: infinite;
+}
+
+.animate__animated.animate__headShake {
+  --animate-duration: 10s;
 }
 
 nav {
@@ -345,14 +349,8 @@ footer .footer, footer .footer-links {
   border-radius: 8px;
   background-color: rgb(255, 234, 0);
 }
-footer .anuncio {
-  background-color: rgb(0, 0, 0);
-}
 @media screen and (max-width: 570px) {
   footer .footer {
-    height: 96px;
-  }
-  footer .anuncio {
     height: 96px;
   }
   footer h4 {
@@ -363,9 +361,6 @@ footer .anuncio {
   footer .footer {
     height: 150px;
   }
-  footer .anuncio {
-    height: 54px;
-  }
   footer h4 {
     font-size: 22px;
   }
@@ -373,9 +368,6 @@ footer .anuncio {
 @media screen and (min-width: 1025px) {
   footer .footer {
     height: 200px;
-  }
-  footer .anuncio {
-    height: 33px;
   }
   footer h4 {
     font-size: 32px;
